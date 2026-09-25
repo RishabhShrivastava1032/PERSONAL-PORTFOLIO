@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Rishabh Shrivastava</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <!--side bar nav bar-->
@@ -32,7 +33,8 @@
     </div>
     </aside>
     <!--main containt block-->
-    <section id="Home" class="hero-section">
+     <main class="main-content">
+    <section id="Home" class="hero-section bg-alt">
         <div class="hero-overlay"></div>
         <div class="hero-contant">
             <h3> Welcome</h3>
@@ -44,17 +46,18 @@
     </section>
 
     <!--About me section-->
-    <section id="about" class="about-me">
+    <section id="about" class="section-name">
         <div class="about-heading">
+            <h2>ABOUT ME</h2>
             <span class="heading">ABOUT ME</span>
         </div>
 
-        <div class="abou-section">
+        <div class="about-section">
             <div class="about-text">
                 <h3> I am <spain>Rishabh Shrivastava</spain>, a full stack developer</h3>
                 <p>pqrtjfrifj foirjfrjerjeoeh</p>
             </div>
-            <div class="about-info">
+            <div class="about-information">
                 <ul>
                     <li> <strong>Name:</strong> Rishabh Shrivastava </li>
                     <li> <strong>Email:</strong> rishahshrivastava1032@gmail.com </li>
@@ -67,10 +70,10 @@
     </section>
 
     <!--what i do-->
-    <section id="services" class="what-i-do">
+    <section id="services" class="section-name bg-alt">
         <div class="service-heading">
-          <h2> What i do</h2>
-          <span class="heading-services">Services</span>  
+          <h2> Services</h2>
+          <span class="heading-background">SERVICES</span>  
         </div>
         <div class="service-block">
              <!--first card-->
@@ -116,9 +119,10 @@
         </div>
     </section>
     <!--skill section-->
-    <section id="skills" class="skills-section">
+    <section id="skills" class="section-name">
         <div class="skills-block">
-            <h4>SKILLS</h4>
+            <h4>Skills</h4>
+            <span class="heading-background">SKILLS</span>
             <!--first skill-->
             <div class="skill-box">
                 <div class="skills-item">
@@ -165,10 +169,10 @@
         </div>
     </section>
     <!--Educations page-->
-    <section id="education" class="education-section">
+    <section id="education" class="section-name bg-alt">
         <div class="section-heading">
             <h2>Education</h2>
-            <span class="heading-bg">ACCADMICS</span>
+            <span class="heading-background">EDUCATION</span>
         </div>
         <div class="education-block">
             <!--Card1 mtech-->
@@ -192,9 +196,20 @@
                             <i class="fa-solid fa-rotate" ></i> Hover to see details
                         </div>
                         <!--back side -->
-                        <div class="flip-card-back">
+                        <div class="education-card-back">
                             <h4 class="back-title">Course Highlights</h4>
-                            
+                            <ul class="back-list">
+                                <li>Object Oriented Programming</li>
+                                <li>Database Management System</li>
+                                <li>Software Engineering</li>
+                            </ul>
+                            <h4 class="back-title">Key Project</h4>
+                            <p class="back-disk">
+                                Hands-on development of scalable web portals, database architecture design, and full-stack integration.
+                            </p>
+                            <div class="education-back back-hint">
+                                <i class="fa-solid fa-rotate"></i> Flip Back
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -202,16 +217,17 @@
         </div>
     </section>
     <!--project page-->
-    <section id="project" class="project-section">
+    <section id="project" class="section-name bg-alt">
         <div class="project-heading">
-            <h2>My Projects</h2>
+            <h2>Projects</h2>
+            <span class="heading-background">PROJECTS</span>
         </div>
         <div class="cards-control">
             <button id="toggleStackButton" class="button-primary">Spread Cards</button>
         </div>
         <div class="stack-container" id="cardstack">
             <!--card 1-->
-            <div class="stack-card1" data-project="1">
+            <div class="stack-card card-1" data-project="1">
                 <img src="#" alt="yoga guru app">
                 <div class="card-overlay">
                     <span class="category">Machine Learning / Web</span>
@@ -223,19 +239,23 @@
                 </div>
             </div>
              <!--card 2-->
-            <div class="stack-card1" data-project="2">
+            <div class="stack-card card-2" data-project="2">
+                <div class="card-image">
                 <img src="#" alt="customized-portfolio">
                 <div class="card-overlay">
                     <span class="category">HTML / CSS / Javascript</span>
                     <h3>Customized portfolio</h3>
                     <p>Customized portfolio is platform in which any one can make his own simple portfolio by changing the text with diffrent background colors.</p>
+                    <div class="card-buttons"></div>
                     <a href="#git link" target="_blank" class="btn-github">
                         <i class="fa-brands fa-github"></i> Link
                     </a>
+                    </div>
+                </div>
                 </div>
             </div>
              <!--card 3-->
-            <div class="stack-card1" data-project="2">
+            <div class="stack-card card-3" data-project="3">
                 <img src="#" alt="Home Utility Servicies">
                 <div class="card-overlay">
                     <span class="category">HTML / css / Javascript</span>
@@ -250,9 +270,10 @@
         </div>
     </section>
     <!--testimonial page-->
-    <section id="testimonial" class="testimonial-section">
+    <section id="testimonial" class="section-name bg-alt">
         <div class="testimonial-heading">
             <h2>Testimonial</h2>
+            <span class="heading-background">TESTIMONIALS</span>
         </div>
         <div class="testimonial-slider">
             <div class="testimonial-track">
@@ -299,10 +320,10 @@
         </div>
     </section>
     <!--contact page-->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="section-name">
         <div class="contact-header">
             <h2>Get in touch</h2>
-            <span class="heading-contact">CONTACT</span>
+            <span class="heading-background">CONTACT</span>
             <form class="contact-form">
                 <input type="text" placeholder="Name" required>
                 <input type="text" placeholder="email" required>
@@ -312,5 +333,57 @@
         </div>
 
     </section>
+    <!--fotter section-->
+    <footer id="footer-section" class="section-name bg-alt">
+        <div class="footer-block">
+            <!--copy right block-->
+            <div class="copy-right">
+                <h3 class="footer-heading">Rishabh Shrivastava<span>.</span></h3>
+                <p class="copy-right-information">
+                    Design and Developed by <strong>Rishabh shrivastava</strong>
+                </p>
+                <p class="copyright-reserve">&copy; 2026 All Rights Reserved</p>
+            </div>
+            <!--Navigation links -->
+            <div class="footer-links">
+                <h4 class="links-title">Quick Links</h4>
+                <ul class="page-links">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#Education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <!--contact information-->
+            <div class="footer-contact">
+                <h4 class="title-contact">Contact Information</h4>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:rishabhshrivastava1032@gmail.com">rishabhshrivastava1032@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel: 7447019946">7447019946</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>India / Indore, India</span>
+                    </li>
+                </ul>
+            </div>
+            <!--social site links-->
+            <div class="fotter-socile">
+                <h4 class="social-title">Connect</h4>
+                <div class="social-links">
+                    <a href="https://github.com/RishabhShrivastava-Portfolio" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a> 
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>   
+                </div>
+            </div>
+        </div>
+    </footer>
+    </main>
 </body>
 </html>
