@@ -3,12 +3,23 @@ const { Pool } = require('pg');
 const cors = require('cors');
 const dns = require('dns');
 const rateLimit = require('express-rate-limit');
+const nodemailer = require('nodemailer');
+require('dotenv').config(); // <-- .env variables load karne ke liye zaroori hai
 
 const app = express();
 
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+// Nodemailer Transporter Setup
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
+  }
+});
 
 // 1. PostgreSQL Connection Config
 const pool = new Pool({
@@ -99,18 +110,27 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
     return res.status(400).json({ success: false, error: 'Please provide a valid, active email address.' });
   }
 
-  // E. Database Insertion
+  // E. Database Insertion & Email Sending
   try {
     const queryText = 'INSERT INTO contact_messages(name, email, message) VALUES($1, $2, $3) RETURNING *';
     const result = await pool.query(queryText, [name.trim(), email.trim(), message.trim()]);
     
+    const mailOptions = {
+      from: email,
+      to: process.env.EMAIL_USER,
+      subject: `New Portfolio Message from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`
+    };
+
+    await transporter.sendMail(mailOptions);
+    
     res.status(200).json({ 
       success: true, 
-      message: 'Message sent successfully!',
+      message: 'Message saved in DB and email sent successfully!',
       data: result.rows[0] 
     });
   } catch (err) {
-    console.error('DB Insert Error:', err.message);
+    console.error('DB Insert or Email Error:', err.message);
     res.status(500).json({ success: false, error: 'Database server error. Please try again later.' });
   }
 });

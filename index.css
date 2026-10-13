@@ -191,6 +191,11 @@ body{
     gap: 40px;
     margin-bottom: 50px;
   }
+  
+  .about-text {
+    margin-left: 20px;
+    padding-right: 30px;
+  }
 
   .about-information ul {
     list-style: none;
@@ -880,8 +885,8 @@ footer page
 ===============================================================================================*/
 
 footer {
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #1a1d23;
+    color: #aab0bc;
     padding: 60px 0 20px;
     font-family: 'Poppins', sans-serif;
     border-top: 1px solid #2a2a2a;
@@ -920,6 +925,15 @@ footer {
     padding-bottom: 8px;
 }
 
+.footer-left {
+    margin-left: 30px;
+}
+
+.footer-middle {
+    margin-left: 100px;
+    color: #aab0bc;
+}
+
 .footer-links h4::after,
 .footer-contact h4::after {
     content: '';
@@ -941,8 +955,8 @@ footer {
 }
 
 .footer-links ul li a {
-    color: #a0a0a0;
-    text-decoration: none;
+    color: #a0aab2 !important;
+    text-decoration: none !important;
     transition: color 0.3s ease, padding-left 0.3s ease;
     font-size: 0.95rem;
 }
@@ -1003,4 +1017,51 @@ footer {
     .footer-social {
         justify-content: center;
     }
+}
+
+.hero-button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.project-button {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn-project {
+    flex: 1;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-live {
+    background-color: #20c997;
+    color: #ffffff;
+    border: 1px solid #20c997 ;
+}
+
+.btn-live:hover {
+    background-color: #1baa80;
+}
+
+.footer-container a,
+.footer-right a,
+.footer-col a {
+    color: #a0aab2 !important;
+    text-decoration: none !important;
+}
+
+.footer-container a:hover,
+.footer-right a:hover,
+.footer-col a:hover {
+    color: #20c997 !important;
 }
